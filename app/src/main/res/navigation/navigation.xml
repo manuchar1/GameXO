@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/userChoiceFragment">
+
+    <fragment
+        android:id="@+id/userChoiceFragment"
+        android:name="com.example.gamexo.UserChoiceFragment"
+        android:label="fragment_user_choice"
+        tools:layout="@layout/fragment_user_choice" >
+        <action
+            android:id="@+id/action_userChoiceFragment_to_gameActivity"
+            app:destination="@id/gameActivity" />
+        <action
+            android:id="@+id/action_userChoiceFragment_to_portaintGameFragment"
+            app:destination="@id/portaintGameFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/gameActivity"
+        android:name="com.example.gamexo.GameActivity"
+        android:label="GameActivity" />
+    <fragment
+        android:id="@+id/portaintGameFragment"
+        android:name="com.example.gamexo.PortaintGameFragment"
+        android:label="PortaintGameFragment" />
+</navigation>
